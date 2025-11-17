@@ -351,7 +351,7 @@ function drawStartScreen() {
     ctx.fillText('BREAKOUT', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2);
 
     ctx.font = 'bold italic 18px Helvetica, Verdana';
-    ctx.fillText('Press SPACE to begin', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 37);
+    ctx.fillText('Press SPACE to begin', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 10 + 36/2 + 18/2);
 }
 
 function drawGameOver() {
