@@ -234,9 +234,22 @@ function checkBrickCollision() {
                 //povecaj brzinu loptice ako je udarila u kut cigle
                 if (Math.abs(dx / brick.width) > 0.4 && Math.abs(dy / brick.height) > 0.4) {
                     ball.speed *= 1.03;
+                    //ažuriraj dx i dy komponente brzine
+                    const angle = Math.atan2(ball.dy, ball.dx);
+                    ball.dx = ball.speed * Math.cos(angle);
+                    ball.dy = ball.speed * Math.sin(angle);
                 }
             } else {
                 ball.dy = -ball.dy;
+
+                //povecaj brzinu loptice ako je udarila u kut cigle
+                if (Math.abs(dx / brick.width) > 0.4 && Math.abs(dy / brick.height) > 0.4) {
+                    ball.speed *= 1.03;
+                    //ažuriraj dx i dy komponente brzine
+                    const angle = Math.atan2(ball.dy, ball.dx);
+                    ball.dx = ball.speed * Math.cos(angle);
+                    ball.dy = ball.speed * Math.sin(angle);
+                }
             }
 
             break;

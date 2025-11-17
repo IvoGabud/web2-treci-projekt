@@ -25,7 +25,7 @@ const BRICK_COLORS = [
 
 //postavke lopte
 const BALL_SIZE = 8;
-const INITIAL_BALL_SPEED = 4;
+const INITIAL_BALL_SPEED = 3;
 
 //postavke palice
 const PADDLE_WIDTH = 60;
