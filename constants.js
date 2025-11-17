@@ -1,5 +1,5 @@
 //postavke canvasa
-const CANVAS_WIDTH = 480;
+const CANVAS_WIDTH = 720;
 const CANVAS_HEIGHT = 576;
 
 //postavke cigli
@@ -9,10 +9,10 @@ const TOTAL_BRICKS = BRICK_ROWS * BRICK_COLS;
 
 const BRICK_WIDTH = 40;
 const BRICK_HEIGHT = 15;
-const BRICK_PADDING_HORIZONTAL = 5;
+const BRICK_PADDING_HORIZONTAL = 30;
 const BRICK_PADDING_VERTICAL = 15;
 const BRICK_OFFSET_TOP = 80;
-const BRICK_OFFSET_LEFT = 17.5;
+const BRICK_OFFSET_LEFT = 25;
 
 //boje cigli
 const BRICK_COLORS = [
