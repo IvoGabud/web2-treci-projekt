@@ -48,6 +48,10 @@ function keyDownHandler(e) {
         startGame();
     }
 
+    if (e.code === 'Space' && (gameState === 'GAME_OVER' || gameState === 'WIN')) {
+        gameState = 'START';
+    }
+
     if (e.code === 'ArrowRight' || e.code === 'KeyD') {
         rightPressed = true;
     }
@@ -331,13 +335,10 @@ function drawStartScreen() {
     ctx.font = 'bold 36px Helvetica, Verdana';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('BREAKOUT', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 - 20);
+    ctx.fillText('BREAKOUT', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2);
 
     ctx.font = 'bold italic 18px Helvetica, Verdana';
-    ctx.fillText('Press SPACE to begin', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 20);
-
-    ctx.font = '14px Helvetica, Verdana';
-    ctx.fillText('Best Score: ' + highScore, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 50);
+    ctx.fillText('Press SPACE to begin', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 37);
 }
 
 function drawGameOver() {
@@ -351,6 +352,9 @@ function drawGameOver() {
     ctx.font = 'bold 20px Helvetica, Verdana';
     ctx.fillStyle = '#FFFFFF';
     ctx.fillText('Final Score: ' + score, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 40);
+
+    ctx.font = 'bold italic 18px Helvetica, Verdana';
+    ctx.fillText('Press SPACE to play again', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 75);
 }
 
 function drawWin() {
@@ -364,6 +368,9 @@ function drawWin() {
     ctx.font = 'bold 20px Helvetica, Verdana';
     ctx.fillStyle = '#FFFFFF';
     ctx.fillText('Perfect Score: ' + score, CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 40);
+
+    ctx.font = 'bold italic 18px Helvetica, Verdana';
+    ctx.fillText('Press SPACE to play again', CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 + 75);
 }
 
 window.addEventListener('load', init);

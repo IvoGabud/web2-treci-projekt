@@ -16,6 +16,7 @@ body {
     padding: 20px;
 }
 
+/* boja i obrub canvasa kako je zadano u zadatku */
 #canvas {
     background-color: #000000;
     border: 5px solid #ffffff;
